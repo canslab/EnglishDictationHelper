@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="Dictation.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Dictation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="statusText" HorizontalAlignment="Center" Text="Hello!" FontSize="35" Grid.Row="0" />
+        <TextBlock x:Name="percentage" HorizontalAlignment="Center" Text="Percentage" FontSize="25" Grid.Row="2"/>
+        <Button x:Name="pickButton" Content="Pick Listening File" HorizontalAlignment="Center" Click="pickButton_Click" Grid.Row="3" />
+        <Button x:Name="pausePlayButton" Content="Pause" HorizontalAlignment="Center" Click="pausePlayButton_Click" Grid.Row="6" />
+        <Button x:Name="forwardButton" Content="+3" Width="100" HorizontalAlignment="Center" Click="forwardButton_Click" Grid.Row="4"  />
+        <Button x:Name="backwardButton" Content="-3" Width="100" HorizontalAlignment="Center" Click="backwardButton_Click" Grid.Row="5" />
+        <MediaPlayerElement HorizontalAlignment="Center" VerticalAlignment="Bottom" x:Name="mediaPlayer" Margin="180,0" Grid.Row="6"/>
+        <TextBlock x:Name="songName" HorizontalAlignment="Center" Text="Hello!" FontSize="25" Grid.Row="1"/>
+    </Grid>
+</Page>
